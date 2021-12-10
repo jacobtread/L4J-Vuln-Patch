@@ -1,4 +1,6 @@
 # WARNING
+THIS EXPLOIT EFFECTS BOTH CLIENTS AND SERVERS
+
 There is currently a exploit going around that affects all versions of Minecraft this exploit
 abuses log4j deserialization in order to achieve remote code execution this exploit is not new but has
 only just recently come to light because of paper mc and spigot etc patching and announcing this exploit

@@ -5,6 +5,9 @@ There is currently a exploit going around that affects all versions of Minecraft
 abuses log4j deserialization in order to achieve remote code execution this exploit is not new but has
 only just recently come to light because of paper mc and spigot etc patching and announcing this exploit
 
+Only use this tool if the client you use hasnt already been patched as this may make clients like Lunar client
+not work 
+
 ## Downloads
 Currently the only available releases for this patcher are Jar releases but binaries will be available soon
 

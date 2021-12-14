@@ -85,9 +85,9 @@ fun getInstallLocation(): String? {
     return if (osName.contains("win")) {
         System.getProperty("user.home") + "/AppData/Roaming/.minecraft"
     } else if (osName.contains("mac")) {
-        "~/Library/Application Support/minecraft"
+        System.getProperty("user.home") + "/Library/Application Support/minecraft"
     } else if (osName.contains("nux")) {
-        "~/.minecraft"
+        System.getProperty("user.home") + "/.minecraft"
     } else {
         null
     }

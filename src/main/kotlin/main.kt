@@ -10,23 +10,23 @@ import kotlin.io.path.*
 fun main(args: Array<String>) {
     val installDir = getInstallLocation()
     if (installDir == null) {
-        println("ERROR: Unsupported Operating System this tool only supports Windows, Linux, and OSX")
+        println("ERROR: Unsupported operating system; this tool only supports Windows, Linux, and macOS/OSX")
         return
     }
     val mcDataDir = Paths.get(installDir)
     if (!mcDataDir.exists()) {
-        println("ERROR: Could not find minecraft install at ${mcDataDir.toAbsolutePath()}???")
+        println("ERROR: Could not find Minecraft install at ${mcDataDir.toAbsolutePath()}, is your install in the default directory?")
         return
     }
 
     val versions = mcDataDir.resolve("versions")
     if (!versions.exists()) {
-        println("ERROR: No versions directory found??? Have you run Minecraft before?")
+        println("ERROR: No versions directory found, have you ran Minecraft before?")
         return
     }
 
     println("STARTING PATCHING")
-    println("Please note this may take longer if you have slower hardware or lots of minecraft version\n")
+    println("Please note this may take longer if you have slower hardware or lots of Minecraft versions\n")
 
     val entries = versions.listDirectoryEntries()
     for (path in entries) {
@@ -80,6 +80,7 @@ fun main(args: Array<String>) {
     println("If you did not see any errors appear throughout the process then you are all clear")
 }
 
+// There should be a scanner for manual input, in case the user has a different default directory
 fun getInstallLocation(): String? {
     val osName = System.getProperty("os.name").lowercase()
     return if (osName.contains("win")) {

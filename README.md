@@ -1,3 +1,7 @@
+# NOTICE
+This tool is no longer necessary mojang has released its own patch which should cover everyone who is affected
+https://www.minecraft.net/en-us/article/important-message--security-vulnerability-java-edition
+
 # WARNING
 THIS EXPLOIT EFFECTS BOTH CLIENTS AND SERVERS
 
